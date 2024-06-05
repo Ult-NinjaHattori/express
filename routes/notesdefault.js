@@ -1,4 +1,4 @@
-/*var express = require('express');
+var express = require('express');
 var router = express.Router();
 // レスポンスのデータ（ノート全件）
 const responseObjectDataAll = {
@@ -21,9 +21,9 @@ bodyText: 'note2 main bunsyo nanndakedo shiyougawakarinikuinndayobokega'
 * @returns {number} data.id - ID
 * @returns {string} data.title - タイトル
 * @returns {string} data.text - 内容
-*//*
+*/
 router.get('/', function (req, res, next) {
 // 全件取得して返す
 res.json(responseObjectDataAll);
 })
-module.exports = router;*/
+module.exports = router;
