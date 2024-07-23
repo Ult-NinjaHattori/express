@@ -5,7 +5,6 @@ require('dotenv').config(); //.env利用のためのライブラリ
 
 // 接続情報を設定
 const { MongoClient } = require("mongodb");
-const { request } = require('../app');
 const uri = process.env.MONGODB_URI; //envから変数呼び出し
 const client = new MongoClient(uri);
 
