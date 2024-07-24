@@ -1,11 +1,15 @@
 var express = require('express');
 var router = express.Router();
+const cors = require('cors');
 require('dotenv').config(); //.env利用のためのライブラリ
 
 // 接続情報を設定
 const { MongoClient } = require("mongodb");
 const uri = process.env.MONGODB_URI; //envから変数呼び出し
 const client = new MongoClient(uri);
+
+// corsミドルウェアを使用
+router.use(cors());
 
 router.get('/', async (req, res) => {
 // データベース、コレクションを指定
